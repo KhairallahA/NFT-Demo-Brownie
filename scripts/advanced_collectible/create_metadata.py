@@ -61,7 +61,3 @@ def upload_to_ipfs(filepath):
         image_uri = f"https://ipfs.io/ipfs/{ipfs_hash}?filename={filename}"
         print(image_uri)
         return image_uri
-
-
-# https://ipfs.io/ipfs/QmYx6GsYAKnNzZ9A6NvEKV9nf1VaDzJrqDR23Y8YSkebLU?filename=shiba-inu.png
-# https://ipfs.io/ipfs/QmcThh7p4MA2rQpvjbxApBbyNL7nUScu7ZprEE2iiX9t1j?filename=0-SHIBA_INU.json
