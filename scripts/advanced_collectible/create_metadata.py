@@ -32,11 +32,10 @@ def main():
         collectible_metadata["description"] = f"An adorable {breed} pup!"
         image_path = "./img/" + breed.lower().replace("_", "-") + ".png"
         
-        # image_uri = None
-        # if os.getenv("UPLOAD_IPFS") == "true":
-        #     image_uri = upload_to_ipfs(image_path)
-        # image_uri = image_uri if image_uri else breed_to_image_uri[breed]
-        image_uri = upload_to_ipfs(image_path)
+        image_uri = None
+        if os.getenv("UPLOAD_IPFS") == "true":
+            image_uri = upload_to_ipfs(image_path)
+        image_uri = image_uri if image_uri else breed_to_image_uri[breed]
 
         collectible_metadata["image"] = image_uri
         with open(metadata_file_name, "w") as file:
